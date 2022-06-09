@@ -105,6 +105,8 @@ async def zipdata(client, message):
                                   text=f'ERROR ❗')
 
 
+
+
 @Client.on_message(filters.command("upload"))
 async def uploadtobot(client, message):
     file_id = int(message.reply_to_message_id)
@@ -165,11 +167,11 @@ async def forward(client, message):
             NAME = ongoing_dict_keys_list[i]
             random_string1 = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
             refer = random_string1 + '_' + NAME[:-7].lower().replace(" ", "")
-            NAME_ST = f"\n📌 {NAME}:"
+            NAME_ST = f"\n📌 [{str(i+1)}]{NAME}:"
             MSG_DATA_LIST.append(NAME_ST)
             MSG_DATA_LIST_NAME.append(NAME_ST)
             await client.send_message(chat_id=TO_ID,
-                                      text=f'{NAME}')
+                                      text=f'🔲 {NAME} 🔲')
             FROM_ID = int(ongoing_dict[ongoing_dict_keys_list[i]][0])
             MSG_LIST = eval(ongoing_dict[ongoing_dict_keys_list[i]][1])
             MSG_TO_LIST = []
@@ -229,7 +231,7 @@ async def forward(client, message):
                     sizex = get_human_size(int(size))
                 except:
                     sizex = "0 B"
-                final_to_file_name = f"▫️#**Class_{str(z + 1)}**: **[{str(to_file_name)}](https://t.me/c/{str(TO_ID)[4:]}/{idto})** [**Size**: {str(sizex)}, **Duration**: {str(durationx)}]"
+                final_to_file_name = f"▫️#Class_{str(z + 1)}: [{str(to_file_name)}](https://t.me/c/{str(TO_ID)[4:]}/{idto}) [Size: {str(sizex)}, Duration: {str(durationx)}]"
                 final_to_file_name_new = f"▫️#**Class_{str(z + 1)}**: **--{str(to_file_name)}--** [**Size**: {str(sizex)}, **Duration**: {str(durationx)}]"
                 MSG_DATA_LIST_NAME.append(final_to_file_name_new)
                 MSG_DATA_LIST.append(final_to_file_name)
@@ -258,7 +260,7 @@ async def forward(client, message):
                 limitx = limitx - len(MSG_DATA_LIST[i])
                 link_msg += str(MSG_DATA_LIST[i]) + '\n'
         final_msg_list.append(link_msg)
-        limitx1 = 4000
+        limitx1 = 1650
         link_msg1 = ''
         final_msg_list_new = []
         for i in range(len(MSG_DATA_LIST_NAME)):
@@ -267,7 +269,7 @@ async def forward(client, message):
                 link_msg1 += str(MSG_DATA_LIST_NAME[i]) + '\n'
             if limitx1 <= 0:
                 final_msg_list_new.append(link_msg1)
-                limitx1 = 4000
+                limitx1 = 1650
                 link_msg1 = ''
                 limitx1 = limitx1 - len(MSG_DATA_LIST_NAME[i])
                 link_msg1 += str(MSG_DATA_LIST_NAME[i]) + '\n'
