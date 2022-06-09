@@ -1,7 +1,7 @@
 {
   "name": "Telegram BOT",
   "description": "Telegram BOT",
-  "repository": "https://github.com/noliax",
+  "repository": "https://github.com/noliaz/copier_bot",
   "logo": "https://cdn.wapka.org/007cic/d976484d086b76a4ec858ba2fc260b03/myapp.jpg4",
   "keywords": ["python", "pyrogram"],
   "image": "heroku/python",
