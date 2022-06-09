@@ -122,7 +122,7 @@ async def forward(client, message):
         CALL_FROM = ' '.join([message.command[i] for i in range(1, len(message.command))])
         ongoing_dict_open = open('ongoing_dict.txt', 'r')
         ongoing_dict_read = ongoing_dict_open.read()
-        ongoing_dict = eval(ongoing_dict_read)
+        ongoing_dict = eval(str(ongoing_dict_read))
         ongoing_dict_keys_list = list(ongoing_dict.keys())
         ongoing_dict_values_list = list(ongoing_dict.values())
         if not os.path.isdir('./BACKUP/'):
