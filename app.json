@@ -1,0 +1,58 @@
+{
+  "name": "Telegram BOT",
+  "description": "Telegram BOT",
+  "repository": "https://github.com/noliax",
+  "logo": "https://cdn.wapka.org/007cic/d976484d086b76a4ec858ba2fc260b03/myapp.jpg4",
+  "keywords": ["python", "pyrogram"],
+  "image": "heroku/python",
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "env": {
+    "API_ID": {
+      "description": "App api_id from https://my.telegram.org"
+    },
+    "API_HASH": {
+      "description": "App api_hash from https://my.telegram.org"
+    },
+    "BOT_TOKEN": {
+      "description": "Bot token from https://t.me/BotFather",
+      "required": false
+    },
+    "CHAT": {
+      "description": "Chat ID of the channel/groups/chat where to forward messages",
+      "required": false
+    },
+    "USERS": {
+      "description": "Sudo Users ID seperated by space.",
+      "required": false
+    },
+    "LINK_CHAT": {
+      "description": "Chat ID of the channel/groups/chat where to save links messages",
+      "required": false
+    },
+    "ZIP_CHAT": {
+      "description": "Chat ID of the channel/groups/chat where to save zip files",
+      "required": false
+    },
+    "FILES_CHAT": {
+      "description": "Chat ID of the channel/groups/chat where to save files",
+      "required": false
+    },
+    "NAMES_CHAT": {
+      "description": "Chat ID of the channel/groups/chat where to save names zip files",
+      "required": false
+    },
+    "NAMES_TEXT_CHAT": {
+      "description": "Chat ID of the channel/groups/chat where to save names messages",
+      "required": false
+    },
+    "ENVIRONMENT": {
+      "description": "Set True/False if you want to use environment variables",
+      "required": false
+    }
+  }
+}
