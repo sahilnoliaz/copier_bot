@@ -26,4 +26,9 @@ else:
     BOT_TOKEN = ""
     CHAT = 0
     USERS = ""
+    LINK_CHAT = 0
+    ZIP_CHAT = 0
+    FILES_CHAT = 0
+    NAMES_CHAT = 0
+    NAMES_TEXT_CHAT = 0
 
